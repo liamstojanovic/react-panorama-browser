@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class RoomNavigation extends Component {
+export class SpaceNavigation extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -30,7 +30,7 @@ export class RoomNavigation extends Component {
     }
 }
 
-export default RoomNavigation
+export default SpaceNavigation
 
 
 

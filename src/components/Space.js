@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class Room extends Component {
+export class Space extends Component {
     constructor(props) {
         super(props)
 
@@ -33,4 +33,4 @@ export class Room extends Component {
     }
 }
 
-export default Room
+export default Space

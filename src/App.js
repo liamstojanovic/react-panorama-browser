@@ -1,11 +1,11 @@
 import './App.css';
-import RoomNavigation from './components/RoomNavigation'
+import SpaceNavigation from './components/SpaceNavigation'
 
 function App() {
   return (
     <div className="App">
       <h1>Placeholder text...</h1>
-      <RoomNavigation />
+      <SpaceNavigation />
     </div>
   );
 }
