@@ -4,45 +4,45 @@ export class SpaceNavigation extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            roomId: 0
+            spaceId: 0
         }
-        this.incrementRoomId = this.incrementRoomId.bind(this)
-        this.decrementRoomId = this.decrementRoomId.bind(this)
+        this.incrementSpaceId = this.incrementSpaceId.bind(this)
+        this.decrementSpaceId = this.decrementSpaceId.bind(this)
     }
-    incrementRoomId () {
+    incrementSpaceId () {
         this.setState(state => ({
-            roomId: state.roomId + 1
+            spaceId: state.spaceId + 1
         }))
     }
-    decrementRoomId () {
+    decrementSpaceId () {
         this.setState(state => ({
-            roomId: state.roomId - 1
+            spaceId: state.spaceId - 1
         }))
     }
     render() {
-        if (this.state.roomId >= 2) {
+        if (this.state.spaceId >= 2) {
             return (
             <div>
-                <button onClick={this.decrementRoomId}>Previous room</button>
-                <button disabled onClick={this.incrementRoomId}>Next room</button>
-                <h1>Current room ID: {this.state.roomId}</h1>
+                <button onClick={this.decrementSpaceId}>Previous space</button>
+                <button disabled onClick={this.incrementSpaceId}>Next space</button>
+                <h1>Current space ID: {this.state.spaceId}</h1>
             </div>
             )
         }
-        if (this.state.roomId <= 0) {
+        if (this.state.spaceId <= 0) {
             return (
             <div>
-                <button disabled onClick={this.decrementRoomId}>Previous room</button>
-                <button onClick={this.incrementRoomId}>Next room</button>
-                <h1>Current room ID: {this.state.roomId}</h1>
+                <button disabled onClick={this.decrementSpaceId}>Previous space</button>
+                <button onClick={this.incrementSpaceId}>Next space</button>
+                <h1>Current space ID: {this.state.spaceId}</h1>
             </div>
             )
         } else {
             return (
             <div>
-                <button onClick={this.decrementRoomId}>Previous room</button>
-                <button onClick={this.incrementRoomId}>Next room</button>
-                <h1>Current room ID: {this.state.roomId}</h1>
+                <button onClick={this.decrementSpaceId}>Previous space</button>
+                <button onClick={this.incrementSpaceId}>Next space</button>
+                <h1>Current space ID: {this.state.spaceId}</h1>
             </div>
             )
         }
@@ -58,13 +58,13 @@ export default SpaceNavigation
 
 // const RoomNavigation = () => {
     
-//     const [roomId, setRoomId] = useState(0)
+//     const [spaceId, setRoomId] = useState(0)
 
 //     return (
 //         <div>
-//             <button onClick={() => setRoomId(roomId - 1)}>Previous room</button>
-//             <button onClick={() => setRoomId(roomId + 1)}>Next room</button>
-//             <p>Room id: {roomId}</p>
+//             <button onClick={() => setRoomId(spaceId - 1)}>Previous room</button>
+//             <button onClick={() => setRoomId(spaceId + 1)}>Next room</button>
+//             <p>Room id: {spaceId}</p>
 //         </div>
 //     )
 // }
