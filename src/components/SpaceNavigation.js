@@ -20,13 +20,32 @@ export class SpaceNavigation extends Component {
         }))
     }
     render() {
-        return (
+        if (this.state.roomId >= 2) {
+            return (
+            <div>
+                <button onClick={this.decrementRoomId}>Previous room</button>
+                <button disabled onClick={this.incrementRoomId}>Next room</button>
+                <h1>Current room ID: {this.state.roomId}</h1>
+            </div>
+            )
+        }
+        if (this.state.roomId <= 0) {
+            return (
+            <div>
+                <button disabled onClick={this.decrementRoomId}>Previous room</button>
+                <button onClick={this.incrementRoomId}>Next room</button>
+                <h1>Current room ID: {this.state.roomId}</h1>
+            </div>
+            )
+        } else {
+            return (
             <div>
                 <button onClick={this.decrementRoomId}>Previous room</button>
                 <button onClick={this.incrementRoomId}>Next room</button>
                 <h1>Current room ID: {this.state.roomId}</h1>
             </div>
-        )
+            )
+        }
     }
 }
 
