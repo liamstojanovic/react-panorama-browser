@@ -4,7 +4,7 @@ import SpaceNavigation from './components/SpaceNavigation'
 function App() {
   return (
     <div className="App">
-      <h1>Placeholder text...</h1>
+      <h1>Navigate between rooms...</h1>
       <SpaceNavigation />
     </div>
   );
