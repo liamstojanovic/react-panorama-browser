@@ -6,7 +6,6 @@ function App() {
     <div className="App">
       <h1>Navigate between rooms...</h1>
       <SpaceNavigation />
-      <Space />
     </div>
   );
 }

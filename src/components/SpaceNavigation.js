@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Space from './Space'
 
 export class SpaceNavigation extends Component {
     constructor(props) {
@@ -25,6 +26,9 @@ export class SpaceNavigation extends Component {
             <div>
                 <button onClick={this.decrementSpaceId}>Previous space</button>
                 <button disabled onClick={this.incrementSpaceId}>Next space</button>
+                <div className="panorama">
+                    <Space currentSpace = {this.state.spaceId} />
+                </div>
                 <h1>Current space ID: {this.state.spaceId}</h1>
             </div>
             )
@@ -34,6 +38,9 @@ export class SpaceNavigation extends Component {
             <div>
                 <button disabled onClick={this.decrementSpaceId}>Previous space</button>
                 <button onClick={this.incrementSpaceId}>Next space</button>
+                <div className="panorama">
+                    <Space currentSpace = {this.state.spaceId} />
+                </div>
                 <h1>Current space ID: {this.state.spaceId}</h1>
             </div>
             )
@@ -42,6 +49,9 @@ export class SpaceNavigation extends Component {
             <div>
                 <button onClick={this.decrementSpaceId}>Previous space</button>
                 <button onClick={this.incrementSpaceId}>Next space</button>
+                <div className="panorama">
+                    <Space currentSpace = {this.state.spaceId} />
+                </div>
                 <h1>Current space ID: {this.state.spaceId}</h1>
             </div>
             )

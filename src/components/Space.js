@@ -13,13 +13,16 @@ export class Space extends Component {
                     title: "Parking lot and Building",
                     panorama: 'https://f002.backblazeb2.com/file/cw3-public/walker/img/IMG_1539.jpg',
                     autoLoad: true, 
-                    orientationOnByDefault: true,
                 },
                 {
                     title: "Lobby",
+                    panorama: 'https://f002.backblazeb2.com/file/cw3-public/walker/img/IMG_1535.jpg',
+                    autoLoad: true,
                 },
                 {
                     title: "Patient Rooms",
+                    panorama: 'https://f002.backblazeb2.com/file/cw3-public/walker/img/IMG_1522.jpg',
+                    autoLoad: true
                 }
             ]
             // pannelumObj : pannellum.viewer('panorama')
@@ -35,7 +38,11 @@ export class Space extends Component {
     //     document.body.appendChild(script)
     // }
     componentDidMount () {
-        window.pannellum.viewer('panorama', this.state.pannellumJson[0])
+        window.pannellum.viewer('panorama', this.state.pannellumJson[this.props.currentSpace])
+    }
+
+    componentDidUpdate() {
+        window.pannellum.viewer('panorama', this.state.pannellumJson[this.props.currentSpace])
     }
 
     render() {
@@ -44,6 +51,7 @@ export class Space extends Component {
         //     "panorama": "assets/img/IMG1539.jpg",
         //     "autoload": true
         // })
+        
         return (
             <div id="panorama"></div>
         )
