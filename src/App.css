@@ -2,7 +2,8 @@
   text-align: center;
 }
 
-#panorama {
+.panorama {
   width: 600px;
   height: 400px;
+  margin: auto;
 }
