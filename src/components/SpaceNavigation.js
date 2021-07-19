@@ -21,7 +21,7 @@ export class SpaceNavigation extends Component {
             spaceId: state.spaceId - 1
         }))
     }
-    setSpaceId (num) {
+    setSpaceId(num) {
         this.setState({ spaceId: num })
     }
     
@@ -29,9 +29,9 @@ export class SpaceNavigation extends Component {
     render() { 
         const directNavigation =  (
             <div className="directNavigation">
-                <button>Parking lot and building</button>
-                <button>Lobby</button>
-                <button>Patient rooms</button>
+                <button onClick={() => this.setState({ spaceId: 0 })}>Parking lot and building</button>
+                <button onClick={() => this.setState({ spaceId: 1 })}>Lobby</button>
+                <button onClick={() => this.setState({ spaceId: 2 })}>Patient rooms</button>
             </div>
             )
         
