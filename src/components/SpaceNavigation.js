@@ -26,12 +26,12 @@ export class SpaceNavigation extends Component {
     }
     
 
-    render() { // Likely need to rewrite this logic // Button state needs following: button hasBeenClicked, button focused, button isDisabled
+    render() { 
         const directNavigation =  (
             <div className="directNavigation">
-                <button onClick={this.setSpaceId(0)}>Parking lot and building</button>
-                <button onClick={this.setSpaceId(1)}>Lobby</button>
-                <button onClick={this.setSpaceId(2)}>Patient rooms</button>
+                <button>Parking lot and building</button>
+                <button>Lobby</button>
+                <button>Patient rooms</button>
             </div>
             )
         
