@@ -29,7 +29,11 @@ export class SpaceNavigation extends Component {
                 <div className="panorama">
                     <Space currentSpace = {this.state.spaceId} />
                 </div>
-                <h1>Current space ID: {this.state.spaceId}</h1>
+                <div className="directNavigation">
+                    <button>Parking lot and building</button>
+                    <button>Lobby</button>
+                    <button>Patient rooms</button>
+                </div>
             </div>
             )
         }
@@ -41,7 +45,11 @@ export class SpaceNavigation extends Component {
                 <div className="panorama">
                     <Space currentSpace = {this.state.spaceId} />
                 </div>
-                <h1>Current space ID: {this.state.spaceId}</h1>
+                <div className="directNavigation">
+                    <button>Parking lot and building</button>
+                    <button>Lobby</button>
+                    <button>Patient rooms</button>
+                </div>
             </div>
             )
         } else {
@@ -52,7 +60,11 @@ export class SpaceNavigation extends Component {
                 <div className="panorama">
                     <Space currentSpace = {this.state.spaceId} />
                 </div>
-                <h1>Current space ID: {this.state.spaceId}</h1>
+                <div className="directNavigation">
+                    <button>Parking lot and building</button>
+                    <button>Lobby</button>
+                    <button>Patient rooms</button>
+                </div>
             </div>
             )
         }
