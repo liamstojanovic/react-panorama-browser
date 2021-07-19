@@ -9,6 +9,7 @@ export class SpaceNavigation extends Component {
         }
         this.incrementSpaceId = this.incrementSpaceId.bind(this)
         this.decrementSpaceId = this.decrementSpaceId.bind(this)
+        this.setSpaceId = this.setSpaceId.bind(this)
     }
     incrementSpaceId () {
         this.setState(state => ({
@@ -20,7 +21,20 @@ export class SpaceNavigation extends Component {
             spaceId: state.spaceId - 1
         }))
     }
+    setSpaceId (num) {
+        this.setState({ spaceId: num })
+    }
+    
+
     render() { // Likely need to rewrite this logic // Button state needs following: button hasBeenClicked, button focused, button isDisabled
+        const directNavigation =  (
+            <div className="directNavigation">
+                <button>Parking lot and building</button>
+                <button>Lobby</button>
+                <button>Patient rooms</button>
+            </div>
+            )
+        
         if (this.state.spaceId >= 2) {
             return (
             <div>
@@ -29,11 +43,7 @@ export class SpaceNavigation extends Component {
                 <div className="panorama">
                     <Space currentSpace = {this.state.spaceId} />
                 </div>
-                <div className="directNavigation">
-                    <button>Parking lot and building</button>
-                    <button>Lobby</button>
-                    <button>Patient rooms</button>
-                </div>
+                {directNavigation}
             </div>
             )
         }
@@ -45,11 +55,7 @@ export class SpaceNavigation extends Component {
                 <div className="panorama">
                     <Space currentSpace = {this.state.spaceId} />
                 </div>
-                <div className="directNavigation">
-                    <button>Parking lot and building</button>
-                    <button>Lobby</button>
-                    <button>Patient rooms</button>
-                </div>
+                {directNavigation}
             </div>
             )
         } else {
@@ -60,11 +66,7 @@ export class SpaceNavigation extends Component {
                 <div className="panorama">
                     <Space currentSpace = {this.state.spaceId} />
                 </div>
-                <div className="directNavigation">
-                    <button>Parking lot and building</button>
-                    <button>Lobby</button>
-                    <button>Patient rooms</button>
-                </div>
+                {directNavigation}
             </div>
             )
         }
@@ -72,23 +74,3 @@ export class SpaceNavigation extends Component {
 }
 
 export default SpaceNavigation
-
-
-
-
-// import React, { useState } from 'react'
-
-// const RoomNavigation = () => {
-    
-//     const [spaceId, setRoomId] = useState(0)
-
-//     return (
-//         <div>
-//             <button onClick={() => setRoomId(spaceId - 1)}>Previous room</button>
-//             <button onClick={() => setRoomId(spaceId + 1)}>Next room</button>
-//             <p>Room id: {spaceId}</p>
-//         </div>
-//     )
-// }
-
-// export default RoomNavigation
