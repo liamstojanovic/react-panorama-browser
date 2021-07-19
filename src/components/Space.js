@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import pannellum from 'pannellum'
+import ReactPannellum, { getConfig } from "react-pannellum"
 
 // I think props need to be passed down from App.js to here
 // PannellumJson needs to be rewritten to abide to pannellum syntax
@@ -24,36 +24,42 @@ export class Space extends Component {
                     panorama: 'https://f002.backblazeb2.com/file/cw3-public/walker/img/IMG_1522.jpg',
                     autoLoad: true
                 }
-            ]
-            // pannelumObj : pannellum.viewer('panorama')
+            ],
+            spaceId: 0,
         }
         
 
     }
 
-    // componentDidMount () {
-    //     const script = document.createElement("script")
-    //     script.src = "https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"
-    //     script.async = true
-    //     document.body.appendChild(script)
-    // }
-    componentDidMount () {
-        window.pannellum.viewer('panorama', this.state.pannellumJson[this.props.currentSpace])
-    }
-
-    componentDidUpdate() {
-        window.pannellum.viewer('panorama', this.state.pannellumJson[this.props.currentSpace])
+    click () {
+        console.log(getConfig)
     }
 
     render() {
-        // let viewer = pannellum.viewer('panorama')
-        // let renderedObj = pannellum.viewer('panorama', {
-        //     "panorama": "assets/img/IMG1539.jpg",
-        //     "autoload": true
-        // })
-        
+        const pannellumEmbed = this.state.pannellumJson.map((element, index) => {
+            return (
+            <ReactPannellum
+                id={String(index)}
+                sceneId={element.title}
+                imageSource={element.panorama}
+                config={{
+                    autoLoad: true,
+                }}
+            />
+            )
+        })
+        console.log(pannellumEmbed)
         return (
-            <div id="panorama"></div>
+            // <div id="panorama">
+            //     <ReactPannellum
+            //         id="1"
+            //         sceneId="Parking lot and Building"
+            //         imageSource="https://f002.backblazeb2.com/file/cw3-public/walker/img/IMG_1539.jpg"
+            //     />
+            // </div>
+            <div id="panorama">
+                {pannellumEmbed[0]}
+            </div>
         )
     }
 }
