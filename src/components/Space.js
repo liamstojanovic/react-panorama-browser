@@ -39,6 +39,7 @@ export class Space extends Component {
         const pannellumEmbed = this.state.pannellumJson.map((element, index) => {
             return (
             <ReactPannellum
+                key={String(index)}
                 id={String(index)}
                 sceneId={element.title}
                 imageSource={element.panorama}
