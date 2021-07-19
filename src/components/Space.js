@@ -58,7 +58,7 @@ export class Space extends Component {
             //     />
             // </div>
             <div id="panorama">
-                {pannellumEmbed[0]}
+                {pannellumEmbed[this.props.currentSpace]}
             </div>
         )
     }
