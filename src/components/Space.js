@@ -10,18 +10,15 @@ export class Space extends Component {
         this.state = {
             pannellumJson : [
                 {
-                    spaceId: 0,
                     title: "Parking lot and Building",
-                    basePath: 'assets/img/IMG1539.jpg',
+                    panorama: 'https://f002.backblazeb2.com/file/cw3-public/walker/img/IMG_1539.jpg',
                     autoLoad: true, 
                     orientationOnByDefault: true,
                 },
                 {
-                    spaceId: 1,
                     title: "Lobby",
                 },
                 {
-                    spaceId: 2,
                     title: "Patient Rooms",
                 }
             ]
@@ -38,10 +35,7 @@ export class Space extends Component {
     //     document.body.appendChild(script)
     // }
     componentDidMount () {
-        window.pannellum.viewer('panorama', {
-            "type": "equirectangular",
-            "panorama": "assets/img/IMG1539.jpg"
-        })
+        window.pannellum.viewer('panorama', this.state.pannellumJson[0])
     }
 
     render() {
