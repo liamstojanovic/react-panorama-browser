@@ -20,7 +20,7 @@ export class SpaceNavigation extends Component {
             spaceId: state.spaceId - 1
         }))
     }
-    render() {
+    render() { // Likely need to rewrite this logic // Button state needs following: button hasBeenClicked, button focused, button isDisabled
         if (this.state.spaceId >= 2) {
             return (
             <div>
