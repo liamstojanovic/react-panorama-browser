@@ -24,8 +24,7 @@ export class Space extends Component {
                     panorama: 'https://f002.backblazeb2.com/file/cw3-public/walker/img/IMG_1522.jpg',
                     autoLoad: true
                 }
-            ],
-            spaceId: 0,
+            ]
         }
         
 
@@ -49,7 +48,6 @@ export class Space extends Component {
             />
             )
         })
-        console.log(pannellumEmbed)
         return (
             // <div id="panorama">
             //     <ReactPannellum
