@@ -1,6 +1,4 @@
 import './App.css';
-// import SpaceNavigation from './components/SpaceNavigation'
-import Space from './components/Space'
 import SpaceNavigation from './components/SpaceNavigation';
 function App() {
   return (
