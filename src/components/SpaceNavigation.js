@@ -28,7 +28,7 @@ export class SpaceNavigation extends Component {
 
     render() { 
         const directNavigation =  (
-            <div className="directNavigation tour-nav-buttons tour-nav-buttons-mobile">
+            <div className="directNavigation">
                 <button onClick={() => this.setState({ spaceId: 0 })}>Parking lot and building</button>
                 <button onClick={() => this.setState({ spaceId: 1 })}>Lobby</button>
                 <button onClick={() => this.setState({ spaceId: 2 })}>Patient rooms</button>
