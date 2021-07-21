@@ -41,6 +41,7 @@ export class Space extends Component {
                 key={String(index)}
                 id={String(index)}
                 sceneId={element.title}
+                type='equirectangular'
                 imageSource={element.panorama}
                 config={{
                     autoLoad: true,
