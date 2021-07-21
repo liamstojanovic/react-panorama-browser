@@ -28,18 +28,20 @@ export class SpaceNavigation extends Component {
 
     render() { 
         const directNavigation =  (
-            <div className="directNavigation">
-                <button onClick={() => this.setState({ spaceId: 0 })}>Parking lot and building</button>
-                <button onClick={() => this.setState({ spaceId: 1 })}>Lobby</button>
-                <button onClick={() => this.setState({ spaceId: 2 })}>Patient rooms</button>
+            <div className="directNavigation w-layout-grid room-grid">
+                <button onClick={() => this.setState({ spaceId: 0 })} className="room-selector-button w-inline-block">Parking lot and building</button>
+                <button onClick={() => this.setState({ spaceId: 1 })} className="room-selector-button w-inline-block">Lobby</button>
+                <button onClick={() => this.setState({ spaceId: 2 })} className="room-selector-button w-inline-block">Patient rooms</button>
             </div>
             )
         
         if (this.state.spaceId >= 2) {
             return (
             <div>
-                <button onClick={this.decrementSpaceId}>Previous space</button>
-                <button disabled onClick={this.incrementSpaceId}>Next space</button>
+                <div className="tour-nav-buttons">
+                    <button onClick={this.decrementSpaceId} className="back-room-button w-inline-block">Previous space</button>
+                    <button disabled onClick={this.incrementSpaceId} className="forward-room-button w-inline-block">Next space</button>
+                </div>
                 <div className="panorama">
                     <Space currentSpace = {this.state.spaceId} />
                 </div>
@@ -50,8 +52,10 @@ export class SpaceNavigation extends Component {
         if (this.state.spaceId <= 0) {
             return (
             <div>
-                <button disabled onClick={this.decrementSpaceId}>Previous space</button>
-                <button onClick={this.incrementSpaceId}>Next space</button>
+                <div className="tour-nav-buttons">
+                    <button disabled onClick={this.decrementSpaceId} className="back-room-button w-inline-block">Previous space</button>
+                    <button onClick={this.incrementSpaceId} className="forward-room-button w-inline-block">Next space</button>
+                </div>
                 <div className="panorama">
                     <Space currentSpace = {this.state.spaceId} />
                 </div>
@@ -61,8 +65,10 @@ export class SpaceNavigation extends Component {
         } else {
             return (
             <div>
-                <button onClick={this.decrementSpaceId}>Previous space</button>
-                <button onClick={this.incrementSpaceId}>Next space</button>
+                <div className="tour-nav-buttons">
+                    <button onClick={this.decrementSpaceId} className="back-room-button w-inline-block">Previous space</button>
+                    <button onClick={this.incrementSpaceId} className="forward-room-button w-inline-block">Next space</button>
+                </div>
                 <div className="panorama">
                     <Space currentSpace = {this.state.spaceId} />
                 </div>
