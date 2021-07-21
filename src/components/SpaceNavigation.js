@@ -37,7 +37,7 @@ export class SpaceNavigation extends Component {
         
         if (this.state.spaceId >= 2) {
             return (
-            <div>
+            <div className="office-tour-section">
                 <div className="tour-nav-buttons">
                     <button onClick={this.decrementSpaceId} className="back-room-button w-inline-block">Previous space</button>
                     <button disabled onClick={this.incrementSpaceId} className="forward-room-button w-inline-block">Next space</button>
@@ -51,7 +51,7 @@ export class SpaceNavigation extends Component {
         }
         if (this.state.spaceId <= 0) {
             return (
-            <div>
+            <div className="office-tour-section">
                 <div className="tour-nav-buttons">
                     <button disabled onClick={this.decrementSpaceId} className="back-room-button w-inline-block">Previous space</button>
                     <button onClick={this.incrementSpaceId} className="forward-room-button w-inline-block">Next space</button>
@@ -64,7 +64,7 @@ export class SpaceNavigation extends Component {
             )
         } else {
             return (
-            <div>
+            <div className="office-tour-section">
                 <div className="tour-nav-buttons">
                     <button onClick={this.decrementSpaceId} className="back-room-button w-inline-block">Previous space</button>
                     <button onClick={this.incrementSpaceId} className="forward-room-button w-inline-block">Next space</button>

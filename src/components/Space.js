@@ -57,8 +57,12 @@ export class Space extends Component {
             //         imageSource="https://f002.backblazeb2.com/file/cw3-public/walker/img/IMG_1539.jpg"
             //     />
             // </div>
-            <div id="panorama">
-                {pannellumEmbed[this.props.currentSpace]}
+            <div className="panorama virtual-tour-section">
+                <div className="virtual-tour-gui">
+                    <h1>{this.state.pannellumJson.title}</h1>
+                    {pannellumEmbed[this.props.currentSpace]}
+                </div>
+
             </div>
         )
     }
