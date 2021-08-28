@@ -50,13 +50,6 @@ export class Space extends Component {
             )
         })
         return (
-            // <div id="panorama">
-            //     <ReactPannellum
-            //         id="1"
-            //         sceneId="Parking lot and Building"
-            //         imageSource="https://f002.backblazeb2.com/file/cw3-public/walker/img/IMG_1539.jpg"
-            //     />
-            // </div>
             <div className="panorama virtual-tour-section">
                 <div className="virtual-tour-gui">
                     <h1>{this.state.pannellumJson.title}</h1>
