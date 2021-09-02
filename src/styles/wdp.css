@@ -2,10 +2,10 @@
     position: relative;
     z-index: 50000;
     width: 100%;
-    height: 100vh;
+    height: 75vh;
     background-color: #fff;
 }
-  
+
 .top-div {
     height: 25%;
     padding-top: 1%;
@@ -96,7 +96,16 @@
     line-height: 22px;
     font-weight: 600;
     text-align: center;
-} 
+}
+@media all and (max-width: 964px) {
+    .room-select-text {
+        font-size: 12px;
+    }
+    .room-backforward-text {
+        font-size: 12px;
+    }
+}
+
 .room-direction-button {
     display: -webkit-box;
     display: -webkit-flex;
