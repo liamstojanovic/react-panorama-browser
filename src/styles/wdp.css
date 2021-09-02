@@ -107,6 +107,24 @@
         font-size: 12px;
     }
 }
+@media all and (max-width: 600px) {
+    .room-select-text {
+        font-size: 10px;
+    }
+    .button-parent-div {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bottom-div {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+    }
+    .virtual-tour-gui {
+        width: 50%;
+        height: 50%;
+    }
+}
 
 .room-direction-button {
     display: -webkit-box;
