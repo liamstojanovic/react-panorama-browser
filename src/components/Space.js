@@ -50,7 +50,7 @@ export class Space extends Component {
             )
         })
         return (
-            <div className="panorama virtual-tour-section">
+            <div className="virtual-tour-section">
                 <div className="virtual-tour-gui">
                     <h2 class="h2">{this.state.pannellumJson[this.props.currentSpace].title}</h2>
                     {pannellumEmbed[this.props.currentSpace]}
