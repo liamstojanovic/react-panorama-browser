@@ -29,9 +29,9 @@ export class SpaceNavigation extends Component {
     render() { 
         const directNavigation =  (
             <div className="directNavigation w-layout-grid room-grid">
-                <button onClick={() => this.setState({ spaceId: 0 })} className="room-selector-button w-inline-block">Parking lot and building</button>
-                <button onClick={() => this.setState({ spaceId: 1 })} className="room-selector-button w-inline-block">Lobby</button>
-                <button onClick={() => this.setState({ spaceId: 2 })} className="room-selector-button w-inline-block">Patient rooms</button>
+                <button onClick={() => this.setState({ spaceId: 0 })} className="room-selector-button"><div className="room-select-text">Parking lot and building</div></button>
+                <button onClick={() => this.setState({ spaceId: 1 })} className="room-selector-button"><div className="room-select-text">Lobby</div></button>
+                <button onClick={() => this.setState({ spaceId: 2 })} className="room-selector-button"><div className="room-select-text">Patient rooms</div></button>
             </div>
             )
         
