@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo&family=Raleway&display=swap');
+
+.virtual-tour-section {
+    position: relative;
+    z-index: 50000;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+}
+
+.top-div {
+    height: 25%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+  
+.div-block-25 {
+    height: 10%;
+}
+  
+.pano-div {
+    height: 65%;
+    background-color: #d6d2d2;
+}
+  
+.h2 {
+    text-align: center;
+}
+  
+.button-parent-div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  
+.room-selector-button {
+    width: 15vw;
+    height: 10vh;
+    margin-left: 1%;
+}
+  
+.room-selector-button {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 8vh;
+    margin-right: 1%;
+    margin-left: 1%;
+    padding-right: 2%;
+    padding-left: 2%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 2px rgba(126, 149, 245, 0.64);
+    text-transform: capitalize;
+  }
+  
+.room-selector-button:hover {
+    background-color: #c0cdff;
+    box-shadow: none;
+    text-transform: capitalize;
+  }
+.bottom-div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 10vh;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+.room-select-text {
+    border-radius: 0px;
+    font-family: Raleway, sans-serif;
+    color: #0932da;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    text-align: center;
+}
+@media all and (max-width: 964px) {
+    .room-select-text {
+        font-size: 12px;
+    }
+    .room-backforward-text {
+        font-size: 12px;
+    }
+}
+@media all and (max-width: 600px) {
+    .room-select-text {
+        font-size: 10px;
+    }
+    .button-parent-div {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bottom-div {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+    }
+    .virtual-tour-gui {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+.room-direction-button {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 25%;
+    height: 100%;
+    margin-right: 1%;
+    margin-left: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 2px rgba(126, 149, 245, 0.64);
+    font-family: Raleway, sans-serif;
+    color: #0932da;
+    font-size: 20px;
+    font-weight: 600;
+}
+  
+.room-direction-button:hover {
+    background-color: #c0cdff;
+    box-shadow: none;
+}
+  
+.room-backforward-text {
+    display: block;
+    margin-right: 2%;
+    margin-left: 2%;
+    padding-left: 0%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+  
+.arrow-image {
+    max-width: 55%;
+}
+  
+.arrow-div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: Cardo, sans-serif;
+    font-size: 48px;
+    line-height: 58px;
+    font-weight: 700;
+}

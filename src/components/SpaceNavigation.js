@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Space from './Space'
+import ArrowBack from './img/arrow_back_disabled.png'
+import ArrowForward from './img/arrow_forward_enabled.png'
 
 export class SpaceNavigation extends Component {
     constructor(props) {
@@ -28,51 +30,63 @@ export class SpaceNavigation extends Component {
 
     render() { 
         const directNavigation =  (
-            <div className="directNavigation w-layout-grid room-grid">
-                <button onClick={() => this.setState({ spaceId: 0 })} className="room-selector-button w-inline-block">Parking lot and building</button>
-                <button onClick={() => this.setState({ spaceId: 1 })} className="room-selector-button w-inline-block">Lobby</button>
-                <button onClick={() => this.setState({ spaceId: 2 })} className="room-selector-button w-inline-block">Patient rooms</button>
+            <div className="button-parent-div">
+                <button onClick={() => this.setState({ spaceId: 0 })} className="room-selector-button"><div className="room-select-text">Parking lot</div></button>
+                <button onClick={() => this.setState({ spaceId: 1 })} className="room-selector-button"><div className="room-select-text">Lobby</div></button>
+                <button onClick={() => this.setState({ spaceId: 2 })} className="room-selector-button"><div className="room-select-text">Patient rooms</div></button>
             </div>
             )
         
         if (this.state.spaceId >= 2) {
             return (
-            <div className="office-tour-section">
-                <div className="tour-nav-buttons">
-                    <button onClick={this.decrementSpaceId} className="back-room-button w-inline-block">Previous space</button>
-                    <button disabled onClick={this.incrementSpaceId} className="forward-room-button w-inline-block">Next space</button>
+                <div className="space-tour-section">
+                <div className="top-div">
+                    <div className="button-parent-div">
+                        {directNavigation}
+                    </div>
                 </div>
-                <div className="panorama">
+                <div className="panorama pano-div">
                     <Space currentSpace = {this.state.spaceId} />
                 </div>
-                {directNavigation}
+                <div className="bottom-div">
+                    <button onClick={this.decrementSpaceId} className="room-direction-button"><div className="room-backforward-text">Previous space</div><div class="arrow-div"><img src={ArrowBack} class="arrow-image" alt="Go back"></img></div></button>
+                    <button disabled onClick={this.incrementSpaceId} className="room-direction-button"><div className="room-backforward-text">Next space</div><div class="arrow-div"><img src={ArrowForward} class="arrow-image" alt="Go back"></img></div></button>
+                </div>
             </div>
             )
         }
         if (this.state.spaceId <= 0) {
             return (
-            <div className="office-tour-section">
-                <div className="tour-nav-buttons">
-                    <button disabled onClick={this.decrementSpaceId} className="back-room-button w-inline-block">Previous space</button>
-                    <button onClick={this.incrementSpaceId} className="forward-room-button w-inline-block">Next space</button>
+            <div className="space-tour-section">
+                <div className="top-div">
+                    <div className="button-parent-div">
+                        {directNavigation}
+                    </div>
                 </div>
-                <div className="panorama">
+                <div className="panorama pano-div">
                     <Space currentSpace = {this.state.spaceId} />
                 </div>
-                {directNavigation}
+                <div className="bottom-div">
+                    <button disabled onClick={this.decrementSpaceId} className="room-direction-button"><div className="room-backforward-text">Previous space</div><div class="arrow-div"><img src={ArrowBack} class="arrow-image" alt="Go back"></img></div></button>
+                    <button onClick={this.incrementSpaceId} className="room-direction-button"><div className="room-backforward-text">Next space</div><div class="arrow-div"><img src={ArrowForward} class="arrow-image" alt="Go back"></img></div></button>
+                </div>
             </div>
             )
         } else {
             return (
-            <div className="office-tour-section">
-                <div className="tour-nav-buttons">
-                    <button onClick={this.decrementSpaceId} className="back-room-button w-inline-block">Previous space</button>
-                    <button onClick={this.incrementSpaceId} className="forward-room-button w-inline-block">Next space</button>
+                <div className="space-tour-section">
+                <div className="top-div">
+                    <div className="button-parent-div">
+                        {directNavigation}
+                    </div>
                 </div>
-                <div className="panorama">
+                <div className="panorama pano-div">
                     <Space currentSpace = {this.state.spaceId} />
                 </div>
-                {directNavigation}
+                <div className="bottom-div">
+                    <button onClick={this.decrementSpaceId} className="room-direction-button"><div className="room-backforward-text">Previous space</div><div class="arrow-div"><img src={ArrowBack} class="arrow-image" alt="Go back"></img></div></button>
+                    <button onClick={this.incrementSpaceId} className="room-direction-button"><div className="room-backforward-text">Next space</div><div class="arrow-div"><img src={ArrowForward} class="arrow-image" alt="Go back"></img></div></button>
+                </div>
             </div>
             )
         }

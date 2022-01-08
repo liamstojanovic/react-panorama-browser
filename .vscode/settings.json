@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/fd5045af-f4f9-45d5-a063-d887ea35d6b2/resourceGroups/cw3/providers/Microsoft.Web/sites/wdp-dev",
+    "appService.deploySubpath": "build"
+}
