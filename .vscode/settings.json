@@ -1,4 +1,9 @@
 {
-    "appService.deploySubpath": "build",
-    "appService.defaultWebAppToDeploy": "None"
+    "appService.deploySubpath": "./",
+    "appService.defaultWebAppToDeploy": "None",
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}",
+        "yarn.lock"
+    ]
 }
