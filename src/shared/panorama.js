@@ -15,3 +15,5 @@ export const spaces = [
         autoLoad: true
     }
 ]
+
+export default spaces
