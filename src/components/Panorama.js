@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-
+//This should render the panorama based on the input
 function Panorama(props) {
     return ( 
         <div>
