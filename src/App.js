@@ -15,8 +15,8 @@ function App() {
       <div className="title">
         <h1>{input[spaceId].title}</h1>
       </div>
+      <DirectNavigation spaceId={spaceId} input={input}/>
       <Panorama input={input[spaceId]}/>
-      <DirectNavigation spaceId={spaceId}/>
       <IncrementalNavigation spaceId={spaceId}/>
     </div>
   );
