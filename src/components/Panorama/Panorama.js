@@ -1,11 +1,33 @@
 import React, { useState } from 'react';
 
 //This should render the panorama based on the input
+// function pannellumEmbed(props) {
+//     return (
+//         <div>
+//             <script>{`
+//                 pannellum.viewer('panorama', {
+//                     "type": "equirectangular",
+//                     "panorama": ${props.input.panorama}
+//                 })
+//             `}
+//             </script>
+//         </div>
+//     )
+// }
+
 function Panorama(props) {
+    
     return ( 
-        <div>
+        <div className="viewer">
             Hello from the Panorama component!
-            JSON: {JSON.stringify(props.input)}
+            <div className="panorama"></div><script>{`
+                pannellum.viewer('panorama', {
+                    "type": "equirectangular",
+                    "panorama": ${props.input.panorama}
+                })
+            `}
+            </script>
+            
         </div>
      );
 }

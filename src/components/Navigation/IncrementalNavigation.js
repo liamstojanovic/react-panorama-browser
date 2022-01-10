@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function IncrementalNavigation() {
+function IncrementalNavigation(props) {
     return ( 
         <div className="incremental-navigation">
             <button className="decrement">Previous</button>
