@@ -18,17 +18,8 @@ import React, { useState } from 'react';
 function Panorama(props) {
     
     return ( 
-        <div className="viewer">
-            Hello from the Panorama component!
-            Displaying ${props.input.title}
-            <div className="panorama"></div><script>{`
-                pannellum.viewer('panorama', {
-                    "type": "equirectangular",
-                    "panorama": ${props.input.panorama}
-                })
-            `}
-            </script>
-            
+        <div className="panorama">
+            Hello from the Panorama componet! Displaying {props.input.title}
         </div>
      );
 }
