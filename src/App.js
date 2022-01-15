@@ -9,7 +9,7 @@ import inputData from './shared/panoramas'
 
 function App() {
   const [input, setInput] = useState(inputData);
-  const [spaceId, setSpaceId] = useState(0);
+  var [spaceId, setSpaceId] = useState(0);
   return (
     <div className="App">
       <div className="title">

@@ -20,6 +20,7 @@ function Panorama(props) {
     return ( 
         <div className="viewer">
             Hello from the Panorama component!
+            Displaying ${props.input.title}
             <div className="panorama"></div><script>{`
                 pannellum.viewer('panorama', {
                     "type": "equirectangular",
