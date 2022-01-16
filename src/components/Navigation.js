@@ -10,7 +10,6 @@ function Navigation(props) {
             <div key={index}>
                 <button key={space.slug} onClick={() => setSpaceId(index)}>{space.title}</button>
             </div>
-            
         )
     });
 
