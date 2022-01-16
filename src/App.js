@@ -13,12 +13,6 @@ function App() {
   return (
     <div className="App">
       <Navigation input={input}/>
-      {/* <div className="title">
-        <h1>{input[spaceId].title}</h1>
-      </div>
-      <DirectNavigation spaceId={spaceId} input={input}/>
-      <Panorama input={input[spaceId]}/>
-      <IncrementalNavigation spaceId={spaceId}/> */}
     </div>
   );
 }
