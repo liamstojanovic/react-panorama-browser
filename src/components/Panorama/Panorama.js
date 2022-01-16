@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect} from 'react';
 
 //This should render the panorama based on the input
 // function pannellumEmbed(props) {
@@ -16,10 +16,28 @@ import React, { useState } from 'react';
 // }
 
 function Panorama(props) {
+    function createScript() {
+        return (
+            `
+            <script>
+                pannellum.viewer('panorama', {
+                    "type": "equirectangular",
+                    "panorama": "https://pannellum.org/images/alma.jpg"
+            });
+            </script>
+            `
+        )
+    }
+    
+    const script = (
+        `
+        <iframe width="500" height="500" allowfullscreen style="border-style:none;" src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=${props.input.panorama}"></iframe>
+        `
+    )
+
     return ( 
         <div className="panorama">
-            Hello from the Panorama component! Displaying {props.input.title}
-            
+            <div dangerouslySetInnerHTML={{__html: script}} />
         </div>
      );
 }
