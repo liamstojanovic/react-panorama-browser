@@ -23,10 +23,8 @@ function Panorama(props) {
         `
     )
 
-    return ( 
-        <div className="panorama">
-            <div dangerouslySetInnerHTML={{__html: script}} />
-        </div>
+    return (
+        <div className="panorama" dangerouslySetInnerHTML={{__html: script}} />
      );
 }
 
