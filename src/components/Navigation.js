@@ -8,11 +8,25 @@ function Navigation(props) {
     const directNavigationButtons = props.input.map((space, index) => {
         return (
             <div key={index}>
-                <button key={space.slug}>{space.title}</button>
+                <button key={space.slug} onClick={() => setSpaceId(index)}>{space.title}</button>
             </div>
             
         )
     });
+
+    function decrementSpaceId() {
+        if (spaceId > 0) {
+            return spaceId - 1
+        }
+        return spaceId;
+    }
+
+    function incrementSpaceId() {
+        if (spaceId < input.length - 1) {
+            return spaceId + 1
+        }
+        return spaceId
+    }
     return (
     <React.Fragment>
         <div className="title">
@@ -23,6 +37,10 @@ function Navigation(props) {
         </div>
         <div className="viewer">
             <Panorama input={input[spaceId]}/>
+        </div>
+        <div className="incremental-navigation">
+            <button className="decrement" onClick={() => setSpaceId(decrementSpaceId())}>Previous</button>
+            <button className="increment" onClick={() => setSpaceId(incrementSpaceId())}>Next</button>
         </div>
     </React.Fragment>
 
