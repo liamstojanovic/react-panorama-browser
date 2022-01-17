@@ -24,7 +24,7 @@ function Panorama(props) {
     )
 
     return (
-        <div className="panorama" dangerouslySetInnerHTML={{__html: script}} />
+        <div id="panorama" dangerouslySetInnerHTML={{__html: script}} />
      );
 }
 
