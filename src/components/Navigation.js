@@ -2,9 +2,11 @@ import React, { Component, useState } from 'react';
 import Panorama from './Panorama/Panorama';
 
 function Navigation(props) {
-
+    // State
     const [spaceId, setSpaceId] = useState(0);
     const input = props.input
+
+    // Button rendering
     const directNavigationButtons = props.input.map((space, index) => {
         return (
             <div key={index}>
@@ -12,7 +14,7 @@ function Navigation(props) {
             </div>
         )
     });
-
+    // Increment / Decrement Button state changes
     function decrementSpaceId() {
         if (spaceId > 0) {
             return spaceId - 1
@@ -26,6 +28,8 @@ function Navigation(props) {
         }
         return spaceId
     }
+
+
     return (
     <React.Fragment>
         <div className="title">
