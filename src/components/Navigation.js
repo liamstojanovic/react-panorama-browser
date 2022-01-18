@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import Panorama from './Panorama/Panorama';
 
 function Navigation(props) {
