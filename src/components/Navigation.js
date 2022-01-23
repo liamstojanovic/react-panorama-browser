@@ -14,6 +14,30 @@ function Navigation(props) {
             </div>
         )
     });
+    function incrementalNavigationButtons(spaceId) {
+        if (spaceId === 0) {
+            return (
+                <div className="incremental-navigation">
+                    <button className="decrement" disabled>Previous</button>
+                    <button className="increment" onClick={() => setSpaceId(incrementSpaceId())}>Next</button>
+                </div>
+            )
+        }
+        if (spaceId === props.input.length - 1) {
+            return (
+                <div className="incremental-navigation">
+                    <button className="decrement" onClick={() => setSpaceId(decrementSpaceId())}>Previous</button>
+                    <button className="increment" disabled>Next</button>
+                </div>
+            )
+        }
+        return (
+            <div className="incremental-navigation">
+                <button className="decrement" onClick={() => setSpaceId(decrementSpaceId())}>Previous</button>
+                <button className="increment" onClick={() => setSpaceId(incrementSpaceId())}>Next</button>
+            </div>
+        )
+    }
     // Increment / Decrement Button state changes
     function decrementSpaceId() {
         if (spaceId > 0) {
@@ -41,10 +65,7 @@ function Navigation(props) {
         <div className="viewer">
             <Panorama input={input[spaceId]}/>
         </div>
-        <div className="incremental-navigation">
-            <button className="decrement" onClick={() => setSpaceId(decrementSpaceId())}>Previous</button>
-            <button className="increment" onClick={() => setSpaceId(incrementSpaceId())}>Next</button>
-        </div>
+        {incrementalNavigationButtons(spaceId)}
     </React.Fragment>
 
      );
