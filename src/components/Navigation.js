@@ -8,6 +8,14 @@ function Navigation(props) {
 
     // Button rendering
     const directNavigationButtons = props.input.map((space, index) => {
+        if (index === spaceId) {
+            return (
+                <div key={index}>
+                    <button key={space.slug} disabled>{space.title}</button>
+                </div>
+            )
+        }
+        
         return (
             <div key={index}>
                 <button key={space.slug} onClick={() => setSpaceId(index)}>{space.title}</button>
