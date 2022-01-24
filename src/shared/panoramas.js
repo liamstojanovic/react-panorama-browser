@@ -13,11 +13,6 @@ export const spaces = [
         title: "Patient Rooms",
         panorama: 'https://f002.backblazeb2.com/file/cw3-public/walker/img/IMG_1522.jpg',
         slug: 'patient-rooms'
-    },
-    {
-        title: "Castillo's Man Cave",
-        panorama: "none",
-        slug: 'castillos-man-cave'
     }
 ]
 

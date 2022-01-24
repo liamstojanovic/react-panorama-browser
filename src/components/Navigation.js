@@ -64,16 +64,18 @@ function Navigation(props) {
 
     return (
     <React.Fragment>
-        <div className="title">
-            <h1>{input[spaceId].title}</h1>
+        <div className="top-div">
+          <div className="title">
+              <h2>{input[spaceId].title}</h2>
+          </div>
+          <div className="direct-navigation">
+              {directNavigationButtons}
+          </div>
         </div>
-        <div className="direct-navigation">
-            {directNavigationButtons}
-        </div>
-        <div className="viewer">
-            <Panorama input={input[spaceId]}/>
-        </div>
-        {incrementalNavigationButtons(spaceId)}
+          <div className="viewer">
+              <Panorama input={input[spaceId]}/>
+          </div>
+          {incrementalNavigationButtons(spaceId)}
     </React.Fragment>
 
      );
