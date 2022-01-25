@@ -1,3 +1,10 @@
+// Example
+// {
+//     title: "Example space",
+//     panorama: 'https://pannellum.org/images/alma.jpg',
+//     slug: 'example-space'
+// }
+
 export const spaces = [
     {
         title: "Parking Lot and Building",
