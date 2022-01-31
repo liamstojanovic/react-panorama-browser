@@ -1,13 +1,14 @@
 import './App.css';
-import './styles/wdp.css'
-// import './styles/normalize.css'
-// import './styles/walkerdentalgroup.webflow.css'
-// import './styles/webflow.css'
-import SpaceNavigation from './components/SpaceNavigation';
+import React, { useState } from 'react';
+import inputData from './shared/panoramas'
+import Navigation from './components/Navigation';
+
+
 function App() {
+  const [input, setInput] = useState(inputData);
   return (
     <div className="App">
-      <SpaceNavigation />
+      <Navigation input={input}/>
     </div>
   );
 }
