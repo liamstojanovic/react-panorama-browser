@@ -4,12 +4,12 @@ function Panorama(props) {
     
     const script = (
         `
-        <iframe allowfullscreen src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=${props.input.panorama}"></iframe>
+        <iframe allowfullscreen id="iframePannellum" src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=${props.input.panorama}"></iframe>
         `
     )
 
     return (
-        <div id="panorama" dangerouslySetInnerHTML={{__html: script}} />
+        <div class="panorama" dangerouslySetInnerHTML={{__html: script}} />
      );
 }
 

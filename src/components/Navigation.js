@@ -72,10 +72,10 @@ function Navigation(props) {
               {directNavigationButtons}
           </div>
         </div>
-          <div className="viewer">
-              <Panorama input={input[spaceId]}/>
-          </div>
-          {incrementalNavigationButtons(spaceId)}
+        <div className="viewer">
+            <Panorama input={input[spaceId]}/>
+        </div>
+        {incrementalNavigationButtons(spaceId)}
     </React.Fragment>
 
      );
