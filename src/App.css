@@ -59,25 +59,26 @@ h2 {
 
 .direct-navigation {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   width: 100vw;
-  -webkit-box-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
   align-items: center;
   margin-top: 1%;
 }
 
+.direct-navigation button {
+  flex: 1;
+}
+
 button {
-  display: flex;
   height: 8vh;
   width: 15vw;
   margin-right: 1vw;
   margin-left: 1vw;
   padding-right: 2%;
   padding-left: 2%;
-  box-pack: center;
   justify-content: center;
-  box-align: center;
   align-items: center;
   border-radius: 10px;
   background-color: #fff;
