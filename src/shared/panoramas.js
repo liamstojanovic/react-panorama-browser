@@ -20,6 +20,11 @@ export const spaces = [
         title: "DC People and Places 3780",
         panorama: 'https://upload.wikimedia.org/wikipedia/commons/3/3f/2017.02.18_Equirectangular_DC_People_and_Places_3780_%2832132214284%29.jpg',
         slug: 'dc-people-places-3780'
+    },
+    {
+        title: "Ascheberg Kirchplatz",
+        panorama: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Ascheberg_Kirchplatz_Panorama.jpg',
+        slug: 'Ascheberg-Kirchplatz'
     }
 ]
 
