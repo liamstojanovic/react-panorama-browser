@@ -7,11 +7,6 @@
 
 export const spaces = [
     {
-        title: "Ampleben Sternenhimmel",
-        panorama: 'https://upload.wikimedia.org/wikipedia/commons/0/04/Ampleben_Sternenhimmel_Panorama.jpg',
-        slug: 'Ampleben-Sternenhimmel'
-    },
-    {
         title: "Longerich",
         panorama: 'https://upload.wikimedia.org/wikipedia/commons/3/30/Longerich_%E2%80%93_360%C2%B0_Panorama_aus_150_m_H%C3%B6he_%E2%80%93_April_2021.jpg',
         slug: 'longerich'
